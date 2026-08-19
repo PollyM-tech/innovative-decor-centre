@@ -55,36 +55,40 @@ const artificialFlowers = [
   },
 ];
 
-const womenGifts = [
+const giftHampers = [
   {
     title: "Women's Gift Hamper",
+    type: "For Her",
     image: "/images/gallery/womengift1.png",
   },
   {
     title: "Beauty & Wellness Hamper",
+    type: "For Her",
     image: "/images/gallery/womengift3.png",
   },
   {
     title: "Premium Women's Hamper",
+    type: "For Her",
     image: "/images/gallery/womengift5.png",
   },
-];
-
-const menGifts = [
   {
     title: "Men's Grooming Hamper",
+    type: "For Him",
     image: "/images/gallery/mengift1.png",
   },
   {
     title: "Men's Classic Gift Hamper",
+    type: "For Him",
     image: "/images/gallery/mengift2.png",
   },
   {
     title: "Gentleman's Gift Set",
+    type: "For Him",
     image: "/images/gallery/mengift3.png",
   },
   {
     title: "Premium Men's Hamper",
+    type: "For Him",
     image: "/images/gallery/mengift4.png",
   },
 ];
@@ -111,9 +115,10 @@ export default function Hero() {
         <div className="pointer-events-none absolute -left-28 top-20 h-80 w-80 rounded-full bg-pink-100/40 blur-3xl" />
         <div className="pointer-events-none absolute -right-28 bottom-0 h-96 w-96 rounded-full bg-pink-100/50 blur-3xl" />
 
-        <div className="relative mx-auto grid min-h-[720px] max-w-7xl items-center gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="z-10 py-16 text-center lg:py-24 lg:text-left">
-            <p className="font-serif text-2xl font-semibold tracking-[0.06em] text-[#D4145A] sm:text-3xl">
+        <div className="relative mx-auto grid min-h-[680px] max-w-7xl items-center gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          {/* Left content */}
+          <div className="z-10 py-16 text-center lg:py-20 lg:text-left">
+            <p className="font-serif text-xl font-semibold tracking-[0.06em] text-[#D4145A] sm:text-2xl">
               Innovative Decor Centre
             </p>
 
@@ -121,14 +126,26 @@ export default function Hero() {
               Fresh Flowers • Artificial Flowers • Gift Hampers
             </p>
 
-            <h1 className="mx-auto mt-7 max-w-2xl font-serif text-5xl leading-[0.96] tracking-[-0.045em] sm:text-6xl lg:mx-0 lg:text-7xl xl:text-[80px]">
-              Flowers made for
-              <span className="mt-2 block italic text-[#D4145A]">
-                life&apos;s beautiful moments.
-              </span>
-            </h1>
+            {/* Animated hero heading */}
+            <div className="mt-7 overflow-hidden">
+              <h1 className="mx-auto max-w-2xl font-serif text-4xl leading-[1] tracking-[-0.04em] sm:text-5xl lg:mx-0 lg:text-6xl xl:text-[64px]">
+                <span
+                  className="block translate-y-0 opacity-100 transition-all duration-700 ease-out"
+                  style={{ transitionDelay: "100ms" }}
+                >
+                  Flowers made for
+                </span>
 
-            <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-zinc-600 sm:text-base lg:mx-0">
+                <span
+                  className="mt-2 block translate-y-0 italic text-[#D4145A] opacity-100 transition-all duration-700 ease-out"
+                  style={{ transitionDelay: "350ms" }}
+                >
+                  life&apos;s beautiful moments.
+                </span>
+              </h1>
+            </div>
+
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-zinc-600 sm:text-base lg:mx-0">
               Discover beautiful fresh flowers, elegant artificial arrangements,
               thoughtful gift hampers and floral decor for every meaningful
               occasion.
@@ -153,7 +170,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-6">
+            <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-6">
               {[
                 ["Fresh", "Quality flowers"],
                 ["Thoughtful", "Curated gifts"],
@@ -163,7 +180,7 @@ export default function Hero() {
                   key={title}
                   className="border-l-2 border-pink-200 pl-3 text-left sm:pl-4"
                 >
-                  <p className="font-serif text-base sm:text-lg">{title}</p>
+                  <p className="font-serif text-sm sm:text-base">{title}</p>
                   <p className="mt-1 text-[10px] text-zinc-500 sm:text-xs">
                     {copy}
                   </p>
@@ -172,10 +189,11 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative min-h-[500px] lg:min-h-[720px]">
-            <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFE8EF] sm:h-[500px] sm:w-[500px]" />
+          {/* Right image */}
+          <div className="relative min-h-[480px] lg:min-h-[680px]">
+            <div className="absolute left-1/2 top-1/2 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFE8EF] sm:h-[470px] sm:w-[470px]" />
 
-            <div className="absolute bottom-[-25px] left-1/2 h-[520px] w-[520px] -translate-x-1/2 sm:h-[620px] sm:w-[620px] lg:bottom-[-35px] lg:left-auto lg:right-[-90px] lg:h-[710px] lg:w-[710px] lg:translate-x-0">
+            <div className="absolute bottom-[-20px] left-1/2 h-[500px] w-[500px] -translate-x-1/2 sm:h-[580px] sm:w-[580px] lg:bottom-[-30px] lg:left-auto lg:right-[-70px] lg:h-[680px] lg:w-[680px] lg:translate-x-0">
               <Image
                 src="/images/flowers/homeprofile.png"
                 alt="Luxury rose bouquet from Innovative Decor Centre"
@@ -193,7 +211,7 @@ export default function Hero() {
               <p className="mt-1 font-serif text-base">Handcrafted</p>
             </div>
 
-            <div className="absolute bottom-28 left-3 hidden rounded-xl border border-pink-100 bg-white/95 px-5 py-4 shadow-xl backdrop-blur sm:block lg:left-8">
+            <div className="absolute bottom-24 left-3 hidden rounded-xl border border-pink-100 bg-white/95 px-5 py-4 shadow-xl backdrop-blur sm:block lg:left-8">
               <p className="text-[9px] uppercase tracking-[0.15em] text-zinc-400">
                 Available For
               </p>
@@ -204,20 +222,20 @@ export default function Hero() {
       </section>
 
       {/* MAIN CATEGORIES */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4145A]">
               Our Collections
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
               Find something beautiful
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              Explore flowers, long-lasting decorative arrangements and gifts
-              for the people who matter most.
+              Explore flowers, long-lasting decorative arrangements and
+              thoughtful gifts for every occasion.
             </p>
           </div>
 
@@ -248,7 +266,7 @@ export default function Hero() {
             >
               <Image
                 src="/images/flowers/artificialplant.png"
-                alt="Artificial flowers and plants"
+                alt="Artificial flowers"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition duration-700 group-hover:scale-105"
@@ -286,14 +304,15 @@ export default function Hero() {
       </section>
 
       {/* FRESH FLOWERS */}
-      <section id="fresh-flowers" className="bg-[#FFF8FA] py-20 sm:py-28">
+      <section id="fresh-flowers" className="bg-[#FFF8FA] py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4145A]">
                 Fresh Flowers
               </p>
-              <h2 className="mt-3 font-serif text-4xl sm:text-5xl">
+
+              <h2 className="mt-3 font-serif text-3xl sm:text-4xl">
                 Freshly made for your moment.
               </h2>
             </div>
@@ -314,7 +333,7 @@ export default function Hero() {
                 key={flower.title}
                 className="group overflow-hidden rounded-2xl bg-white shadow-sm"
               >
-                <div className="relative h-[390px] overflow-hidden">
+                <div className="relative h-[360px] overflow-hidden">
                   <Image
                     src={flower.image}
                     alt={flower.title}
@@ -329,7 +348,7 @@ export default function Hero() {
                     Fresh Flowers
                   </p>
 
-                  <h3 className="mt-2 font-serif text-xl">{flower.title}</h3>
+                  <h3 className="mt-2 font-serif text-lg">{flower.title}</h3>
 
                   <a
                     href={whatsappUrl}
@@ -343,13 +362,40 @@ export default function Hero() {
               </article>
             ))}
           </div>
+
+          {/* Fresh flower video */}
+          <div className="mt-14 grid overflow-hidden rounded-[2rem] bg-zinc-950 lg:grid-cols-[1.2fr_0.8fr]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="aspect-video h-full w-full object-cover"
+            >
+              <source src="/videos/fresh-flowers.mp4" type="video/mp4" />
+            </video>
+
+            <div className="flex flex-col justify-center p-8 text-white sm:p-10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink-300">
+                Fresh From Our Shop
+              </p>
+
+              <h3 className="mt-3 font-serif text-3xl">
+                See today&apos;s flowers in motion.
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-300">
+                A closer look at our fresh arrangements, colors and styles.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FLOWER + WINE FEATURE */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:px-8">
-          <div className="relative min-h-[520px] overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-[500px] overflow-hidden rounded-[2rem]">
             <Image
               src="/images/flowers/freshflowerwine.png"
               alt="Fresh flowers and wine gift"
@@ -364,7 +410,7 @@ export default function Hero() {
               Flowers & Gifting
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-4xl">
               Flowers can say a lot.
               <span className="block italic text-[#D4145A]">
                 A thoughtful gift says even more.
@@ -372,8 +418,8 @@ export default function Hero() {
             </h2>
 
             <p className="mt-6 max-w-lg text-sm leading-7 text-zinc-600">
-              Pair beautiful flowers with selected gifts for birthdays,
-              anniversaries, congratulations and unforgettable surprises.
+              Pair flowers with selected gifts for birthdays, anniversaries,
+              congratulations and unforgettable surprises.
             </p>
 
             <a
@@ -391,7 +437,7 @@ export default function Hero() {
       {/* ARTIFICIAL FLOWERS */}
       <section
         id="artificial-flowers"
-        className="bg-zinc-950 py-20 text-white sm:py-28"
+        className="bg-zinc-950 py-20 text-white sm:py-24"
       >
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mb-12 max-w-2xl">
@@ -399,13 +445,13 @@ export default function Hero() {
               Artificial Collection
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
               Beautiful. Elegant. Long-lasting.
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-zinc-400">
-              Artificial flowers and plants designed for homes, offices,
-              churches, reception areas and decorative spaces.
+              Artificial flowers and plants for homes, offices, churches and
+              decorative spaces.
             </p>
           </div>
 
@@ -415,7 +461,7 @@ export default function Hero() {
                 key={item.title}
                 className="group overflow-hidden rounded-2xl bg-zinc-900"
               >
-                <div className="relative h-[420px] overflow-hidden">
+                <div className="relative h-[360px] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -430,23 +476,36 @@ export default function Hero() {
                     Artificial Collection
                   </p>
 
-                  <h3 className="mt-2 font-serif text-xl">{item.title}</h3>
+                  <h3 className="mt-2 font-serif text-lg">{item.title}</h3>
                 </div>
               </article>
             ))}
+          </div>
+
+          {/* Artificial flower video */}
+          <div className="mt-14 overflow-hidden rounded-[2rem]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="aspect-video w-full object-cover"
+            >
+              <source src="/videos/artificial-flowers.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
 
       {/* OCCASIONS */}
-      <section id="occasions" className="py-20 sm:py-28">
+      <section id="occasions" className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4145A]">
               Shop By Occasion
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
               Something beautiful for every occasion.
             </h2>
           </div>
@@ -458,9 +517,9 @@ export default function Hero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex min-h-36 flex-col items-center justify-center gap-3 border-b border-r border-pink-100 px-4 text-center transition duration-300 hover:bg-[#D4145A] hover:text-white"
+                className="group flex min-h-32 flex-col items-center justify-center gap-3 border-b border-r border-pink-100 px-4 text-center transition duration-300 hover:bg-[#D4145A] hover:text-white"
               >
-                <span className="text-2xl text-[#D4145A] transition group-hover:text-white">
+                <span className="text-xl text-[#D4145A] transition group-hover:text-white">
                   ✿
                 </span>
 
@@ -472,123 +531,66 @@ export default function Hero() {
       </section>
 
       {/* GIFT HAMPERS */}
-      <section id="gift-hampers" className="bg-[#FFF4F7] py-20 sm:py-28">
+      <section id="gift-hampers" className="bg-[#FFF4F7] py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4145A]">
               Gift Hampers
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
               Thoughtful gifts for everyone.
             </h2>
+
+            <p className="mt-4 text-sm leading-7 text-zinc-600">
+              Browse gifts for women, men, birthdays, love, appreciation and
+              special celebrations.
+            </p>
           </div>
 
-          {/* Women */}
-          <div>
-            <div className="mb-7 flex items-end justify-between gap-4">
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#D4145A]">
-                  For Her
-                </p>
-                <h3 className="mt-2 font-serif text-3xl">
-                  Women&apos;s Gift Hampers
-                </h3>
-              </div>
-            </div>
+          {/* Uniform gift cards */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {giftHampers.map((gift) => (
+              <article
+                key={gift.title}
+                className="group overflow-hidden rounded-2xl bg-white shadow-sm"
+              >
+                <div className="relative h-[350px] overflow-hidden">
+                  <Image
+                    src={gift.image}
+                    alt={gift.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {womenGifts.map((gift) => (
-                <article
-                  key={gift.title}
-                  className="group overflow-hidden rounded-2xl bg-white"
-                >
-                  <div className="relative h-[420px] overflow-hidden">
-                    <Image
-                      src={gift.image}
-                      alt={gift.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
+                <div className="flex min-h-[150px] flex-col p-5">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#D4145A]">
+                    {gift.type}
+                  </p>
 
-                  <div className="p-5">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#D4145A]">
-                      Gift Hamper
-                    </p>
+                  <h3 className="mt-2 font-serif text-lg">{gift.title}</h3>
 
-                    <h4 className="mt-2 font-serif text-xl">{gift.title}</h4>
-
-                    <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-4 inline-flex text-xs font-semibold text-[#D4145A]"
-                    >
-                      Customize This Hamper →
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          {/* Men */}
-          <div className="mt-16">
-            <div className="mb-7">
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#D4145A]">
-                For Him
-              </p>
-
-              <h3 className="mt-2 font-serif text-3xl">
-                Men&apos;s Gift Hampers
-              </h3>
-            </div>
-
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {menGifts.map((gift) => (
-                <article
-                  key={gift.title}
-                  className="group overflow-hidden rounded-2xl bg-white"
-                >
-                  <div className="relative h-[350px] overflow-hidden">
-                    <Image
-                      src={gift.image}
-                      alt={gift.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="p-5">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#D4145A]">
-                      Gift Hamper
-                    </p>
-
-                    <h4 className="mt-2 font-serif text-xl">{gift.title}</h4>
-
-                    <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-4 inline-flex text-xs font-semibold text-[#D4145A]"
-                    >
-                      Customize This Hamper →
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-auto pt-5 text-xs font-semibold text-[#D4145A]"
+                  >
+                    Customize This Hamper →
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SHOP */}
-      <section className="py-20 sm:py-28">
+      {/* VISIT SHOP */}
+      <section className="py-20 sm:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:px-8">
-          <div className="relative min-h-[520px] overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-[500px] overflow-hidden rounded-[2rem]">
             <Image
               src="/images/flowers/shopimage.png"
               alt="Innovative Decor Centre shop"
@@ -603,7 +605,7 @@ export default function Hero() {
               Visit Our Shop
             </p>
 
-            <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-4xl">
               Come and see our collections in person.
             </h2>
 
@@ -636,6 +638,44 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* OPENING HOURS VIDEO */}
+      <section className="bg-[#FFF7FA] py-20">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="overflow-hidden rounded-[2rem] bg-zinc-950">
+            <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="aspect-video h-full w-full object-cover"
+              >
+                <source src="/videos/opening-hours.mp4" type="video/mp4" />
+              </video>
+
+              <div className="flex flex-col justify-center bg-[#D4145A] p-8 text-white sm:p-12">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-pink-200">
+                  Come Visit Us
+                </p>
+
+                <h2 className="mt-3 font-serif text-3xl">Opening Hours</h2>
+
+                <p className="mt-5 text-sm leading-7 text-pink-50">
+                  Visit our shop for fresh flowers, artificial flowers, gift
+                  hampers and personalized recommendations.
+                </p>
+
+                <p className="mt-6 text-sm font-semibold">
+                  Aga Khan Walk
+                  <br />
+                  Re-insurance Plaza, Ground Floor
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="bg-[#D4145A] py-20 text-white">
         <div className="mx-auto max-w-4xl px-5 text-center">
@@ -643,7 +683,7 @@ export default function Hero() {
             Flowers • Gifts • Decor
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-6xl">
+          <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-5xl">
             Tell us what you&apos;re celebrating.
           </h2>
 

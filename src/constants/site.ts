@@ -1,15 +1,5 @@
 export const SITE_CONFIG = {
-  name: "Innovative Decor Centre",
-  shortName: "Innovative",
-  description:
-    "floral design, Events planning, fresh flowers and artificial flowers.",
-
   phone: "254714543029",
-  whatsapp: "254714543029",
-
-  instagram: "innovativedecorcentre",
-  facebook: "innovativedecorcentre",
-  tiktok: "innovativedecorcentre",
 
   navigation: [
     {
@@ -17,24 +7,32 @@ export const SITE_CONFIG = {
       href: "/",
     },
     {
-      label: "Events",
-      href: "/events",
-    },
-    {
       label: "Flowers",
-      href: "/flowers",
+      href: "/#fresh-flowers",
     },
     {
-      label: "Gallery",
-      href: "/gallery",
+      label: "Gift Hampers",
+      href: "/#gift-hampers",
+    },
+    {
+      label: "Services",
+      href: "/#services",
+    },
+    {
+      label: "Occasions",
+      href: "/#occasions",
+    },
+    {
+      label: "Events & Decor",
+      href: "/#events",
     },
     {
       label: "About",
-      href: "/about",
+      href: "/#about",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "/#contact",
     },
   ],
-} as const;
+};
