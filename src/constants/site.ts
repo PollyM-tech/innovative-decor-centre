@@ -5,6 +5,7 @@ export const SITE_CONFIG = {
     "floral design, Events planning, fresh flowers and artificial flowers.",
 
   phone: "254714543029",
+  whatsapp: "254714543029",
 
   instagram: "innovativedecorcentre",
   facebook: "innovativedecorcentre",
